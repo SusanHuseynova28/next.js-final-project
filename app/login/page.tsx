@@ -5,7 +5,8 @@ import { LoginValidation } from "./LoginValidation";
 import CustomLoadingSpinner from "../_components/CustomLoading";
 import { signInWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../_firebase/config";
-import toast from "react-hot-toast";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import Register from "../register/page";
 import { useRouter } from 'next/navigation';
 
@@ -25,16 +26,17 @@ export default function Login() {
       setIsLoading(true);
       try {
         const res = await signInWithEmailAndPassword(auth, values.email, values.password);
+        console.log("Firebase signIn response:", res);
 
-        if (res.operationType === "signIn") {
+        if (res?.operationType === "signIn" && res?._tokenResponse?.idToken) {
           if (typeof window !== "undefined") {
-            localStorage.setItem("userToken", JSON.stringify(res?._tokenResponse?.idToken));
+            localStorage.setItem("userToken", JSON.stringify(res._tokenResponse.idToken));
           }
-          toast.success("Login successful");
-          router.push("/home");  // Kullanıcıyı login sonrası /home sayfasına yönlendir
+          toast.success("Login successful!");
+          router.push("/home");
         }
       } catch (err) {
-        toast.error(err.message);
+        toast.error(err?.message || "An unexpected error occurred");
       } finally {
         setIsLoading(false);
       }
@@ -47,11 +49,12 @@ export default function Login() {
 
   return (
     <div className="flex min-h-screen">
+      <ToastContainer /> 
       <div className="w-1/2 bg-gray-200 flex flex-col justify-center items-center text-white p-8">
         <img
           className="w-[400px] mb-10 animate-slide-in shadow-lg transition-all duration-500 ease-in-out opacity-0"
           src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
-          alt=""
+          alt="Synck Logo"
         />
         <p className="text-3xl mb-4 text-center text-black animate-fade-in opacity-0">
           Seamless IT for your business, boosting your growth.
@@ -143,7 +146,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
             <div className="flex justify-center mt-2">
-              {/* Sosyal medya ile giriş butonları buraya eklenebilir */}
+             
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function Header() {
                     Home <HiMiniChevronDown className="ml-1" />
                   </span>
                 </Link>
-                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[220px] h-24 bg-white border rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[220px] h-24 bg-white border rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
                   <Link href="/it-services">
                     <p className="p-2 hover:text-blue-500 text-sm pl-4 mt-2">
                       IT Services
@@ -50,7 +50,7 @@ export default function Header() {
                     Company <HiMiniChevronDown className="ml-1" />
                   </span>
                 </Link>
-                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[65rem] h-auto lg:h-[25rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[65rem] h-auto lg:h-[25rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
                   <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
                     {/* Get Started Column */}
                     <div>
@@ -300,7 +300,7 @@ export default function Header() {
                   Portfolio <HiMiniChevronDown className="ml-1" />
                 </span>
               </Link>
-              <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[60rem] h-auto lg:h-[20rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300">
+              <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[60rem] h-auto lg:h-[20rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
                 <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
                   <div className="flex items-center gap-4">
                     <img

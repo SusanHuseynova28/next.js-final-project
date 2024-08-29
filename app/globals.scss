@@ -50,3 +50,19 @@
 .animate-slide-in-with-shadow {
     animation: slideInWithShadow 1s ease-in-out forwards;
 }
+
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-scroll {
+    display: flex;
+    width: calc(200%); /* Ensure the container is wide enough for a seamless scroll */
+    animation: scroll 30s linear infinite;
+  }
+  

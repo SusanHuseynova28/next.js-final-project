@@ -6,7 +6,7 @@ import { auth } from "../_firebase/config";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import CustomLoadingSpinner from "../_components/CustomLoading";
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Register() {
     const [loading, setLoading] = useState(false);
@@ -37,14 +37,19 @@ export default function Register() {
 
     return (
         <div className="h-screen flex items-center justify-center bg-gray-200">
+            <Toaster />
             <div className="lg:flex items-center space-x-16">
                 <div className="w-5/6 md:w-3/4 lg:w-2/3 xl:w-[500px] 2xl:w-[550px] mt-8 mx-auto px-16 py-8 bg-white rounded-lg shadow-lg">
                     <h2 className="text-center text-2xl font-bold tracking-wide text-gray-800">Sign Up</h2>
                     <p className="text-center text-sm text-gray-600 mt-2">
-                        Already have an account?{" "}
-                        <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline" title="Sign In">
+                        Already have an account? 
+                        <span
+                            onClick={() => toast("Sign in option will be available soon")}
+                            className="text-blue-600 cursor-pointer hover:text-blue-700 hover:underline"
+                            title="Sign In"
+                        >
                             Sign in here
-                        </a>
+                        </span>
                     </p>
                     <form
                         onSubmit={(e) => {
@@ -123,15 +128,19 @@ export default function Register() {
                                 id="remember_me"
                                 className="mr-2 focus:ring-0 rounded"
                             />
-                            <label htmlFor="remember_me" className="text-gray-700">
+                            <label
+                                htmlFor="remember_me"
+                                className="text-gray-700"
+                                onClick={() => toast("Terms and Privacy Policy will be available soon")}
+                            >
                                 I accept the{" "}
-                                <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline">
+                                <span className="text-blue-600 cursor-pointer hover:text-blue-700 hover:underline">
                                     terms
-                                </a>{" "}
+                                </span>{" "}
                                 and{" "}
-                                <a href="#" className="text-blue-600 hover:text-blue-700 hover:underline">
+                                <span className="text-blue-600 cursor-pointer hover:text-blue-700 hover:underline">
                                     privacy policy
-                                </a>
+                                </span>
                             </label>
                         </div>
                         <div className="my-4 flex items-center justify-end space-x-4">
@@ -145,19 +154,18 @@ export default function Register() {
                     </form>
                 </div>
                 <div className="relative overflow-hidden flex w-1/2 justify-around items-center md:flex">
-    <div className="">
-        <img
-            className="w-[400px] animate-slide-in-with-shadow opacity-0"
-            src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
-            alt=""
-        />
-    </div>
-    <div className="absolute -bottom-32 -left-40 w-96 h-96 rounded-full opacity-50 animate-pulse-slow"></div>
-    <div className="absolute -bottom-40 -left-20 w-96 h-96 bg-cream-100 rounded-full opacity-50 animate-zoom-in-out"></div>
-    <div className="absolute -top-40 -right-0 w-96 h-96 rounded-full opacity-50 animate-pulse-slow"></div>
-    <div className="absolute -top-20 -right-20 w-96 h-96 bg-cream-100 rounded-full opacity-50 animate-zoom-in-out"></div>
-</div>
-
+                    <div className="">
+                        <img
+                            className="w-[400px] animate-slide-in-with-shadow opacity-0"
+                            src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div className="absolute -bottom-32 -left-40 w-96 h-96 rounded-full opacity-50 animate-pulse-slow"></div>
+                    <div className="absolute -bottom-40 -left-20 w-96 h-96 bg-cream-100 rounded-full opacity-50 animate-zoom-in-out"></div>
+                    <div className="absolute -top-40 -right-0 w-96 h-96 rounded-full opacity-50 animate-pulse-slow"></div>
+                    <div className="absolute -top-20 -right-20 w-96 h-96 bg-cream-100 rounded-full opacity-50 animate-zoom-in-out"></div>
+                </div>
             </div>
         </div>
     );
