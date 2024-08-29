@@ -1,18 +1,24 @@
-
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "@firebase/auth";
+import { getAuth } from "firebase/auth";
+import { getAnalytics, isSupported } from "firebase/analytics";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCETJ6S9ywc8ZRoKHhD1mAOWFKyTmKeUM4",
-  authDomain: "next-auth-379f4.firebaseapp.com",
-  projectId: "next-auth-379f4",
-  storageBucket: "next-auth-379f4.appspot.com",
-  messagingSenderId: "420247154662",
-  appId: "1:420247154662:web:0813689e72d54b65f6f027",
-  measurementId: "G-FPWFJK6M7Z"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+
+if (typeof window !== "undefined") {
+  isSupported().then((supported) => {
+    if (supported) {
+      getAnalytics(app);
+    }
+  });
+}

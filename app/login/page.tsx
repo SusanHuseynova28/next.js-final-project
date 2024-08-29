@@ -7,12 +7,12 @@ import { signInWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../_firebase/config";
 import toast from "react-hot-toast";
 import Register from "../register/page";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
 
 export default function Login() {
-  const router = useRouter()
-  const [isLoading, setIsLoading] = React.useState(false);
-  const [showRegister, setShowRegister] = useState(false); 
+  const router = useRouter();
+  const [isLoading, setIsLoading] = useState(false);
+  const [showRegister, setShowRegister] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -25,12 +25,13 @@ export default function Login() {
       setIsLoading(true);
       try {
         const res = await signInWithEmailAndPassword(auth, values.email, values.password);
-        
-        if (res.operationType == "signIn") {
-          debugger
-          localStorage.setItem("userToken",JSON.stringify(res?._tokenResponse?.idToken))
+
+        if (res.operationType === "signIn") {
+          if (typeof window !== "undefined") {
+            localStorage.setItem("userToken", JSON.stringify(res?._tokenResponse?.idToken));
+          }
           toast.success("Login successful");
-          router.push("/")
+          router.push("/home");  // Kullanıcıyı login sonrası /home sayfasına yönlendir
         }
       } catch (err) {
         toast.error(err.message);
@@ -142,7 +143,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
             <div className="flex justify-center mt-2">
-              
+              {/* Sosyal medya ile giriş butonları buraya eklenebilir */}
             </div>
           </div>
         </div>
