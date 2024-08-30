@@ -1,5 +1,5 @@
 import Header from "../features/header/page";
-import ScrollingCards from "../Cards";
+import ScrollingCards from "../components/Cards";
 export default function HeroSection() {
   return (
     <>
@@ -62,9 +62,9 @@ export default function HeroSection() {
               </div>
             </div>
 
-            <div className="flex flex-row  gap-4 pr-6">
+            <div className="flex flex-row  gap-4 pr-6 ">
               <div className="bg-white p-4 text-center shadow-lg rounded-lg  text-center lg:text-left mt-4 w-[20rem] h-[8rem]">
-                <div className="flex items-center space-x-2 mt-2 text-center justify-center mt-10">
+                <div className="flex items-center space-x-2 mt-2 text-center justify-center mt-12">
                   <img
                     src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/small-img-4-1.png"
                     alt="Expert 1"

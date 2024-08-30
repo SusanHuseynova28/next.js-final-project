@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../_firebase/config";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import CustomLoadingSpinner from "../_components/CustomLoading";
+import CustomLoadingSpinner from "../components/CustomLoading";
 import toast, { Toaster } from "react-hot-toast";
 
 export default function Register() {

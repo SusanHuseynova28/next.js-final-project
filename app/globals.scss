@@ -62,7 +62,7 @@
   
   .animate-scroll {
     display: flex;
-    width: calc(200%); /* Ensure the container is wide enough for a seamless scroll */
+    width: calc(200%); 
     animation: scroll 30s linear infinite;
   }
   

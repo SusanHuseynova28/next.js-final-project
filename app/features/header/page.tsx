@@ -1,57 +1,97 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { HiMiniChevronDown } from "react-icons/hi2";
+import { HiMiniChevronDown, HiUser } from "react-icons/hi2";
 import { FaTwitter, FaInstagram, FaLinkedin, FaDribbble } from "react-icons/fa";
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
+  const router = useRouter();
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState('');
+  const [accountType, setAccountType] = useState('');
+  const [isHomeHovered, setIsHomeHovered] = useState(false);
   const [isCompanyHovered, setIsCompanyHovered] = useState(false);
+  const [isPortfolioHovered, setIsPortfolioHovered] = useState(false);
+
+  useEffect(() => {
+    const email = localStorage.getItem("userEmail") || "";
+    const type = localStorage.getItem("accountType") || "Standard Account";
+    setUserEmail(email);
+    setAccountType(type);
+  }, []);
+
+  const handleLogout = () => {
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("userToken");
+      localStorage.removeItem("userEmail");
+      localStorage.removeItem("accountType");
+    }
+    router.push("/login");
+  };
+
+  const toggleUserMenu = () => {
+    setIsUserMenuOpen(!isUserMenuOpen);
+  };
 
   return (
-    <div className="">
-      <header className="flex flex-col lg:flex-row items-center justify-around p-4 border">
-        <div className="flex flex-col lg:flex-row items-center">
+    <div>
+      <header className="flex flex-col lg:flex-row items-center justify-around p-4 border relative w-full">
+        <div className="flex flex-col lg:flex-row items-center ">
           <img
             src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
             alt="Synck Logo"
-            className="h-6 pr-6 mt-1"
+            className="h-6 pr-6 pt-1"
           />
-          <nav className="flex flex-col lg:flex-row gap-4 lg:gap-10 pl-0 lg:pl-6 mt-4 lg:mt-2 relative">
-            <div className="relative">
-              <div className="group">
-                <Link href="/home">
-                  <span className="text-black text-sm hover:text-blue-500 flex items-center">
-                    Home <HiMiniChevronDown className="ml-1" />
-                  </span>
-                </Link>
-                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[220px] h-24 bg-white border rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
-                  <Link href="/it-services">
-                    <p className="p-2 hover:text-blue-500 text-sm pl-4 mt-2">
+          <nav className="flex flex-col lg:flex-row gap-4 lg:gap-10 pl-0 lg:pl-6 pt-4 lg:pt-2 ">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsHomeHovered(true)}
+              onMouseLeave={() => setIsHomeHovered(false)}
+            >
+              <Link href="/home">
+                <span className="text-black text-sm hover:text-blue-500 flex items-center">
+                  Home <HiMiniChevronDown className="ml-1" />
+                </span>
+              </Link>
+              {isHomeHovered && (
+                <div
+                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[220px]  rounded-lg  mt-1  opacity-100 transition-opacity duration-300 z-50"
+                  onClick={() => setIsHomeHovered(true)}
+                  onMouseLeave={() => setIsHomeHovered(false)}
+                >
+                 <div className="mt-4  bg-white">
+                 <Link href="/it-services">
+                    <p className="p-2 hover:text-blue-500 text-sm pl-4 ">
                       IT Services
                     </p>
                   </Link>
                   <Link href="/business-consulting">
-                    <p className="p-2 hover:text-blue-500 text-sm pl-4 mt-2">
+                    <p className="p-2 hover:text-blue-500 text-sm pl-4 ">
                       Business Consulting
                     </p>
                   </Link>
+                 </div>
                 </div>
-              </div>
+              )}
             </div>
             <div
-              className="relative"
+              className=""
               onMouseEnter={() => setIsCompanyHovered(true)}
               onMouseLeave={() => setIsCompanyHovered(false)}
             >
-              <div className="group">
-                <Link href="/company">
-                  <span className="text-black text-sm hover:text-blue-500 flex items-center">
-                    Company <HiMiniChevronDown className="ml-1" />
-                  </span>
-                </Link>
-                <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[65rem] h-auto lg:h-[25rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 visible group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
-                  <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-8 p-8">
+              <Link href="/company">
+                <span className="text-black text-sm hover:text-blue-500 flex items-center">
+                  Company <HiMiniChevronDown className="ml-1" />
+                </span>
+              </Link>
+              {isCompanyHovered && (
+                <div
+                  className="absolute left-0 pt-2 lg:pt-6 w-[100%] lg: h-auto lg:h-[25rem]    rounded-lg  opacity-100 transition-opacity duration-300 z-50"
+                  onMouseEnter={() => setIsCompanyHovered(true)}
+                  onMouseLeave={() => setIsCompanyHovered(false)}
+                >
+                  <div className="w-full grid grid-cols-1  bg-white mt-[1px] md:grid-cols-4 gap-8 p-8">
                     {/* Get Started Column */}
                     <div>
                       <h4 className="text-xs font-semibold text-gray-900 mb-4">
@@ -287,84 +327,90 @@ export default function Header() {
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <div
-              className={`relative group ${
-                isCompanyHovered ? "pointer-events-none" : ""
-              }`}
+              className=""
+              onMouseEnter={() => setIsPortfolioHovered(true)}
+              onMouseLeave={() => setIsPortfolioHovered(false)}
             >
               <Link href="/portfolio">
                 <span className="text-black text-sm hover:text-blue-500 flex items-center">
                   Portfolio <HiMiniChevronDown className="ml-1" />
                 </span>
               </Link>
-              <div className="absolute left-0 mt-2 lg:mt-6 w-full lg:w-[60rem] h-auto lg:h-[20rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition-opacity duration-300 z-50">
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-1.jpg"
-                      alt="E-commerce"
-                      className="w-[150px] h-[100px] rounded-lg mb-2"
-                    />
-                    <div className="flex flex-col">
-                      <h4 className="text-xs font-semibold text-gray-900">
-                        E-commerce
-                      </h4>
-                      <p className="text-xs text-gray-600">
-                        we undertook a project to migrate their existing.
-                      </p>
+              {isPortfolioHovered && (
+                <div
+                  className="absolute left-0 mt-2 lg:pt-6 w-full  h-auto lg:h-[20rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-100 transition-opacity duration-300 z-50"
+                  onMouseEnter={() => setIsPortfolioHovered(true)}
+                  onMouseLeave={() => setIsPortfolioHovered(false)}
+                >
+                  <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 p-8">
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-1.jpg"
+                        alt="E-commerce"
+                        className="w-[150px] h-[100px] rounded-lg mb-2"
+                      />
+                      <div className="flex flex-col">
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          E-commerce
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          We undertook a project to migrate their existing.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-2.jpg"
-                      alt="App Development"
-                      className="w-[150px] h-[100px] rounded-lg mb-2"
-                    />
-                    <div className="flex flex-col">
-                      <h4 className="text-xs font-semibold text-gray-900">
-                        App Development
-                      </h4>
-                      <p className="text-xs text-gray-600">
-                        The mobile application has significantly improved.
-                      </p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-2.jpg"
+                        alt="App Development"
+                        className="w-[150px] h-[100px] rounded-lg mb-2"
+                      />
+                      <div className="flex flex-col">
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          App Development
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          The mobile application has significantly improved.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-3.jpeg"
-                      alt="SAAS Integration"
-                      className="w-[150px] h-[100px] rounded-lg mb-2"
-                    />
-                    <div className="flex flex-col ">
-                      <h4 className="text-xs font-semibold text-gray-900">
-                        SAAS Integration
-                      </h4>
-                      <p className="text-xs text-gray-600">
-                        We partnered with DEF to upgrade their outdated IT.
-                      </p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-3.jpeg"
+                        alt="SAAS Integration"
+                        className="w-[150px] h-[100px] rounded-lg mb-2"
+                      />
+                      <div className="flex flex-col ">
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          SAAS Integration
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          We partnered with DEF to upgrade their outdated IT.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <img
-                      src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-4.jpeg"
-                      alt="Virtual Reality"
-                      className="w-[150px] h-[100px] rounded-lg mb-2"
-                    />
-                    <div className="flex flex-col">
-                      <h4 className="text-xs font-semibold text-gray-900">
-                        Virtual Reality
-                      </h4>
-                      <p className="text-xs text-gray-600">
-                        Enter into the virtual reality world for real
-                        experience.
-                      </p>
+                    <div className="flex items-center gap-4">
+                      <img
+                        src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/portfolio-mega-menu-4.jpeg"
+                        alt="Virtual Reality"
+                        className="w-[150px] h-[100px] rounded-lg mb-2"
+                      />
+                      <div className="flex flex-col">
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          Virtual Reality
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          Enter into the virtual reality world for real
+                          experience.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              )}
             </div>
 
             <Link href="/services">
@@ -391,6 +437,27 @@ export default function Header() {
               Contact Us
             </span>
           </Link>
+          
+          <div className="relative">
+            <HiUser
+              onClick={toggleUserMenu}
+              className="text-black text-2xl cursor-pointer hover:text-gray-500"
+            />
+            {isUserMenuOpen && (
+              <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50">
+                <div className="block px-4 py-2 text-sm text-gray-700">
+                  <p><strong>Email:</strong> {userEmail}</p>
+                  <p><strong>Hesab Növü:</strong> {accountType}</p>
+                  <button 
+                    onClick={handleLogout} 
+                    className="bg-blue-700 text-sm text-white mt-2 p-3 rounded-lg"
+                  >
+                   Log Out
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </header>
     </div>

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import { LoginValidation } from "./LoginValidation";
-import CustomLoadingSpinner from "../_components/CustomLoading";
+import CustomLoadingSpinner from "../components/CustomLoading";
 import { signInWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../_firebase/config";
 import { ToastContainer, toast } from "react-toastify";
@@ -31,6 +31,8 @@ export default function Login() {
         if (res?.operationType === "signIn" && res?._tokenResponse?.idToken) {
           if (typeof window !== "undefined") {
             localStorage.setItem("userToken", JSON.stringify(res._tokenResponse.idToken));
+            localStorage.setItem("userEmail", values.email); 
+            localStorage.setItem("accountType", "Standard Account"); 
           }
           toast.success("Login successful!");
           router.push("/home");
@@ -146,7 +148,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
             <div className="flex justify-center mt-2">
-             
+              {/* Burada əlavə olaraq sosial media ilə daxil olma düymələri yerləşdirə bilərsiniz */}
             </div>
           </div>
         </div>
