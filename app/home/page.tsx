@@ -9,6 +9,7 @@ import ConsulCard from "../components/ConsulCard";
 import SwipperCard from "../components/SwipperCard";
 import Showcase from "../components/ShowCaseSwipper";
 import NewsArticleCard from "../components/ArticleCard";
+import BluebaseandSnaponCards from "../components/BlueBaseandSnapOnCards";
 
 export default function HeroSection() {
   const [animate, setAnimate] = useState(false);
@@ -146,6 +147,7 @@ export default function HeroSection() {
         <SwipperCard/>
         <Showcase/>
         < NewsArticleCard />
+        <BluebaseandSnaponCards/>
 
       </div>
     </>
