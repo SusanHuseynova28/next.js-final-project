@@ -2,15 +2,15 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 export default function SwipperCard() {
   return (
     <div className="relative w-full max-w-5xl mx-auto p-4 h-[20rem]">
       {/* Left Navigation Button */}
-      <div className="absolute inset-y-0 left-[-3rem] flex items-center" style={{ top: '60%' }}>
+      <div className="absolute inset-y-0 left-[-3rem] flex items-center" style={{ top: '40%' }}>
         <div className="swiper-button-prev flex items-center justify-center p-6 w-[3rem] h-[3rem] bg-blue-50 rounded-full shadow-lg cursor-pointer">
-          <FaArrowLeft className="text-blue-600 text-xs" /> 
+          <FiArrowLeft className="text-blue-400 text-xs" />
         </div>
       </div>
 
@@ -27,7 +27,13 @@ export default function SwipperCard() {
       >
         {/* Slide 1 */}
         <SwiperSlide>
-          <div className="bg-black w-[100%] h-[26rem] text-white p-14 rounded-lg relative">
+          <div
+            className="bg-cover bg-no-repeat bg-center text-white p-14 w-[100%] h-[28rem] rounded-lg relative"
+            style={{
+              backgroundColor: '#1C1C1C',
+              backgroundImage: `url('https://wpriverthemes.com/synck/wp-content/uploads/2023/11/bg-shape-3-1.svg')`,
+            }}
+          >
             <div className="absolute mt-[1rem]">
               <span className="bg-blue-600 text-white font-bold px-4 py-3 mt-6 rounded-lg">
                 Linked in
@@ -56,7 +62,13 @@ export default function SwipperCard() {
 
         {/* Slide 2 */}
         <SwiperSlide>
-          <div className="bg-black h-[26rem] w-[100%] text-white p-14 rounded-lg relative">
+          <div
+            className="bg-cover bg-no-repeat bg-center text-white p-14 w-[100%] h-[28rem] rounded-lg relative"
+            style={{
+              backgroundColor: '#1C1C1C',
+              backgroundImage: `url('https://wpriverthemes.com/synck/wp-content/uploads/2023/11/bg-shape-3-1.svg')`,
+            }}
+          >
             <div className="absolute mt-[1rem]">
               <span className="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">
                 Linked in
@@ -85,7 +97,13 @@ export default function SwipperCard() {
 
         {/* Slide 3 */}
         <SwiperSlide>
-          <div className="bg-black h-[26rem] w-[100%] text-white p-14 rounded-lg relative">
+          <div
+            className="bg-cover bg-no-repeat bg-center text-white p-14 w-[100%] h-[28rem] rounded-lg relative"
+            style={{
+              backgroundColor: '#1C1C1C',
+              backgroundImage: `url('https://wpriverthemes.com/synck/wp-content/uploads/2023/11/bg-shape-3-1.svg')`,
+            }}
+          >
             <div className="absolute mt-[1rem]">
               <span className="bg-blue-600 text-white font-bold px-4 py-2 rounded-lg">
                 Linked in
@@ -114,9 +132,9 @@ export default function SwipperCard() {
       </Swiper>
 
       {/* Right Navigation Button */}
-      <div className="absolute inset-y-0 right-[-3rem] flex items-center" style={{ top: '60%' }}>
+      <div className="absolute inset-y-0 right-[-3rem] flex items-center" style={{ top: '40%' }}>
         <div className="swiper-button-next flex items-center justify-center p-6 w-[3rem] h-[3rem] bg-blue-50 rounded-full shadow-lg cursor-pointer">
-          <FaArrowRight className="text-blue-600 text-xs" /> {/* Smaller arrow size */}
+          <FiArrowRight className="text-blue-600 text-xs" />
         </div>
       </div>
     </div>

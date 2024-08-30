@@ -3,9 +3,9 @@ import React from "react";
 export default function ConsulCard() {
   return (
     <section className="bg-white mx-auto flex justify-center items-center w-[90%] h-[40rem]">
-      <div className="container  px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Section */}
-        <div>
+      <div className="container  px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2  ">
+       
+        <div className="pl-24">
           <p className="text-blue-600 uppercase tracking-widest text-xs  mb-2">
             Consulting Excellence
           </p>
@@ -31,8 +31,8 @@ export default function ConsulCard() {
             </li>
           </ul>
         </div>
-        <div className="flex flex-row gap-4">
-          <div className="bg-[#F3F6FD] p-6 h-[10rem] w-[24rem] rounded-lg shadow-sm mt-32">
+        <div className="flex flex-row gap-4 justify-center ">
+          <div className="bg-[#F3F6FD] p-6 h-[9rem] w-[20rem] rounded-lg shadow-sm mt-32">
             <h3 className="text-sm font-bold text-gray-900">
               Tailored Solutions
             </h3>
@@ -46,7 +46,9 @@ export default function ConsulCard() {
               <div className="flex-shrink-0">
                 <div className="w-12 h-12 bg-blue-50 text-blue-600 font-bold rounded-full flex items-center justify-center">
                   01
+                  
                 </div>
+                
               </div>
               <div className="w-full">
                 <div className="bg-[#F3F6FD] p-6 rounded-lg shadow-sm w-[18rem]">

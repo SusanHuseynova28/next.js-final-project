@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Header from "../features/header/page";
-import ScrollingCards from "../components/Cards";
+import ScrollingCards from "../components/AnimationCards";
 import CardModal from "../components/CardModal";
 import ServicesSection from "../components/ServicesCards";
 import CaseCard from "../components/CaseCard";
@@ -65,7 +65,7 @@ export default function HeroSection() {
               <img
                 src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/bg1-1-1.png"
                 alt="IT Specialist"
-                className={`rounded-lg shadow-lg w-full lg:w-[550px] h-[300px] object-cover transition-transform duration-1000 ${animate ? 'scale-100' : 'scale-95 opacity-0'}`}
+                className={`rounded-lg shadow-md w-full lg:w-[550px] h-[300px] object-cover transition-transform duration-1000 ${animate ? 'scale-100' : 'scale-95 opacity-0'}`}
               />
 
               {/* Text Overlay */}
@@ -76,17 +76,17 @@ export default function HeroSection() {
                     src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/icon1-1.svg"
                     alt=""
                   />
-                  <h2 className="text-4xl text-black text-black">+8</h2>
+                  <h2 className="text-4xl text-black ">+8</h2>
                   <p className="text-black w-[2rem]">years experince</p>
                 </div>
               </div>
             </div>
 
-            <div className="flex flex-row gap-4 pr-6">
+            <div className="flex flex-row gap-1 pr-4">
               <div
-                className={`bg-white p-4 text-center shadow-lg rounded-lg text-center lg:text-left mt-4 w-[20rem] h-[8rem] transition-transform duration-1000 ${animate ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+                className={`bg-white p-4 text-center shadow-md rounded-lg  lg:text-left mt-4 w-[20rem] h-[8rem] transition-transform duration-1000 ${animate ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
               >
-                <div className="flex items-center space-x-2 mt-2 text-center justify-center mt-10">
+                <div className="flex items-center space-x-2  text-center justify-center mt-10">
                   <img
                     src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/small-img-4-1.png"
                     alt="Expert 1"
@@ -114,7 +114,7 @@ export default function HeroSection() {
               </div>
 
               <div
-                className={`bg-white p-6 w-[14rem] h-[8rem] shadow-lg text-center mt-4 rounded-lg transition-transform duration-1000 ${animate ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+                className={`bg-white p-6 w-[14rem] h-[8rem] shadow-md text-center mt-4 rounded-lg transition-transform duration-1000 ${animate ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
               >
                 <div className="flex items-center gap-4 justify-center">
                   <div className="flex items-center">

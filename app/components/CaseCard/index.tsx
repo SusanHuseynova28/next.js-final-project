@@ -82,7 +82,7 @@ export default function CaseCard() {
             </div>
           </div>
 
-          {/* Text Section */}
+         
           <div className="bg-white shadow-md rounded-lg p-10 w-[28rem] flex flex-col justify-between ">
             <div>
               <div className="flex items-center mb-4">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="bg-[#1C1C1C]">
+    <div className="bg-[#1C1C1C] mt-10">
       {/* Background Image */}
       <div
         className="bg-cover bg-no-repeat bg-center"
@@ -127,9 +127,9 @@ export default function Footer() {
 
                 {/* Company */}
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
-                  <p className="font-semibold mb-2 text-white">Company</p>
+                  <p className="font-semibold mb-6 text-white">Company</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
-                    <li className="mt-4">
+                    <li className="mt-1">
                       <Link href="#">Blog</Link>
                     </li>
                     <li>

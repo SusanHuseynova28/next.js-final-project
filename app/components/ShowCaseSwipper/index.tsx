@@ -54,14 +54,15 @@ export default function Showcase() {
               <div className="relative overflow-hidden rounded-lg h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
                   <img
-                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-2.png"
+                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-1.png"
                     alt="E-commerce platform development"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0"></div>
                   <div className="absolute top-4 left-4 text-black">
-                    <h3 className="text-2xl font-semibold">
-                      Software as a Service integration
+                    <h3 className="text-2xl font-semibold text-white">
+                    E-commerce platform development
+                      
                     </h3>
                   </div>
                 </div>
@@ -73,14 +74,15 @@ export default function Showcase() {
               <div className="relative overflow-hidden rounded-lg h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
                   <img
-                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-3.png"
+                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-2.png"
                     alt="Software as a Service integration"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0"></div>
                   <div className="absolute top-4 left-4 text-black">
                     <h3 className="text-2xl font-semibold">
-                      E-commerce platform development
+                    
+                      Software as a Service integration
                     </h3>
                   </div>
                 </div>
@@ -92,7 +94,7 @@ export default function Showcase() {
               <div className="relative overflow-hidden rounded-lg h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
                   <img
-                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-5-new.png"
+                    src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/project-3.png"
                     alt="Mobile Platform Development"
                     className="w-full h-full object-cover"
                   />

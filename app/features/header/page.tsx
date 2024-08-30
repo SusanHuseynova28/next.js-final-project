@@ -41,7 +41,7 @@ export default function Header() {
           <img
             src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
             alt="Synck Logo"
-            className="h-6 pr-6 pt-1"
+            className="h-8 pr-8 pt-1 pl-14"
           />
           <nav className="flex flex-col lg:flex-row gap-4 lg:gap-10 pl-0 lg:pl-6 pt-4 lg:pt-2 ">
             <div
@@ -56,7 +56,7 @@ export default function Header() {
               </Link>
               {isHomeHovered && (
                 <div
-                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[230px]  rounded-lg  mt-[1px]  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[230px]  rounded-lg  mt-[5px]  opacity-100 transition-opacity duration-300 z-50"
                   onClick={() => setIsHomeHovered(true)}
                   onMouseLeave={() => setIsHomeHovered(false)}
                 >
@@ -92,7 +92,6 @@ export default function Header() {
                   onMouseLeave={() => setIsCompanyHovered(false)}
                 >
                   <div className="w-full grid grid-cols-1  bg-white mt-[1px] md:grid-cols-4 gap-8 p-8">
-                    
                     <div>
                       <h4 className="text-xs font-semibold text-gray-900 mb-4 pl-[10rem]">
                         Get Started
@@ -143,12 +142,11 @@ export default function Header() {
                       </ul>
                     </div>
 
-                    
                     <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4 lg:pl-[7rem]">
+                      <h4 className="text-xs font-semibold text-gray-900 mb-4 lg:pl-[12rem]">
                         Company
                       </h4>
-                      <ul className="space-y-2 lg:pl-[7rem]">
+                      <ul className="space-y-2 lg:pl-[12rem]">
                         <li>
                           <Link href="#">
                             <span className="text-gray-600 hover:text-blue-500 text-xs">
@@ -194,12 +192,12 @@ export default function Header() {
                       </ul>
                     </div>
 
-                    {/* Product Column */}
-                    <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4 pr-4">
+                    <div className="flex gap-20">
+                      
+                      <ul className="space-y-2 ">
+                      <h4 className="text-xs font-semibold text-gray-900 ">
                         Product
                       </h4>
-                      <ul className="space-y-2 pr-10">
                         <li>
                           <Link href="#">
                             <span className="text-gray-600 hover:text-blue-500 text-xs">
@@ -228,26 +226,10 @@ export default function Header() {
                             </span>
                           </Link>
                         </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              New Releases
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Solutions
-                            </span>
-                          </Link>
-                        </li>
+                        
                       </ul>
-                    </div>
-
-                   
-                    <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4 pr-[4rem]">
+                      <div>
+                      <h4 className="text-xs font-semibold text-gray-900  ">
                         Legal
                       </h4>
 
@@ -297,34 +279,12 @@ export default function Header() {
                         </li>
                       </ul>
                     </div>
-                  </div>
+                    <div className="">
+                    <img src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/iphone-13-1.jpg" alt="" className="w-[5rem] " />
 
-                  <div className=" bg-white mt-4 pt-4">
-                    <div className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-8">
-                      <div className="flex space-x-4">
-                        <Link href="#">
-                          <FaDribbble className=" text-blue-500 h-4 w-4" />
-                        </Link>
-                        <Link href="#">
-                          <FaTwitter className=" text-blue-500 h-4 w-4" />
-                        </Link>
-                        <Link href="#">
-                          <FaInstagram className=" text-blue-500 h-4 w-4" />
-                        </Link>
-                        <Link href="#">
-                          <FaLinkedin className=" text-blue-500 h-4 w-4" />
-                        </Link>
-                      </div>
-
-                      <div className="mt-4 lg:mt-0">
-                        <p className="text-gray-600 text-sm">
-                          Looking for new career?{" "}
-                          <Link href="#">
-                            <span className="text-blue-500">We're hiring</span>
-                          </Link>
-                        </p>
-                      </div>
                     </div>
+                    </div>
+                    
                   </div>
                 </div>
               )}
@@ -425,13 +385,17 @@ export default function Header() {
             </Link>
           </nav>
         </div>
+        
         <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 gap-4 mt-4 lg:mt-0">
+        <span className="h-[2rem] border border-gray-300"></span>
           <div className="text-center lg:text-left">
+            
             <Link href="tel:+19387407555">
               <span className="text-blue-500 text-sm font-bold">Call Us ↗</span>
             </Link>
             <p className="text-sm">+1-938-740-7555</p>
           </div>
+          <span className="h-[2rem] border border-gray-300"></span>
           <Link href="/contact">
             <span className="bg-blue-600 text-white text-sm px-3 py-3 rounded-full hover:bg-black cursor-pointer">
               Contact Us
@@ -444,14 +408,12 @@ export default function Header() {
               className="text-black text-2xl cursor-pointer hover:text-gray-500"
             />
             {isUserMenuOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50">
+              <div className="absolute right-0 mt-6 w-48 bg-white border rounded-lg shadow-lg z-50">
                 <div className="block px-4 py-2 text-sm text-gray-700">
                   <p>
                     <strong>Email:</strong> {userEmail}
                   </p>
-                  <p>
-                    <strong>Hesab Növü:</strong> {accountType}
-                  </p>
+                  
                   <button
                     onClick={handleLogout}
                     className="bg-blue-700 text-sm text-white mt-2 p-3 rounded-lg"

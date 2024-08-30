@@ -59,7 +59,7 @@ export default function NewsArticleCard() {
           </ul>
         </div>
         <div className="mt-6 flex justify-end items-end">
-          <button className="bg-blue-500 text-white text-xl rounded-full w-[3rem] h-[3rem]">
+          <button className="bg-blue-500 text-white hover:bg-white hover:text-black text-xl rounded-full w-[3rem] h-[3rem]">
             ↗
           </button>
         </div>

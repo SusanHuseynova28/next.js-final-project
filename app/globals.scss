@@ -6,26 +6,16 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+ 
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
+  
+  .animate-scroll::after {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 100%; /* Match the width of the entire content to create a loop effect */
+  }
+  
 .animate-slide-in {
     animation: slideIn 1s ease-in-out forwards;
 }
