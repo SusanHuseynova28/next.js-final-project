@@ -11,6 +11,8 @@ import Showcase from "../components/ShowCaseSwipper";
 import NewsArticleCard from "../components/ArticleCard";
 import BluebaseandSnaponCards from "../components/BlueBaseandSnapOnCards";
 import ProductPromotionSection from "../components/ProductSectionCard";
+import Form from "../components/Form";
+import Footer from "../features/Footer/page";
 
 export default function HeroSection() {
   const [animate, setAnimate] = useState(false);
@@ -150,7 +152,8 @@ export default function HeroSection() {
         < NewsArticleCard />
         <BluebaseandSnaponCards/>
         <ProductPromotionSection/>
-
+        <Form/>
+        <Footer/>
       </div>
     </>
   );

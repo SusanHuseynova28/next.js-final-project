@@ -44,7 +44,7 @@ export default function Register() {
                     <p className="text-center text-sm text-gray-600 mt-2">
                         Already have an account? 
                         <span
-                            onClick={() => toast("Sign in option will be available soon")}
+                            
                             className="text-blue-600 cursor-pointer hover:text-blue-700 hover:underline"
                             title="Sign In"
                         >
@@ -90,7 +90,7 @@ export default function Register() {
                             ) : null}
                         </div>
                         <div className="flex flex-col my-4">
-                            <label htmlFor="password" className="text-gray-700">
+                            <label htmlFor="password" className="">
                                 Password
                             </label>
                             <input

@@ -28,14 +28,18 @@ export default function Login() {
         const res = await signInWithEmailAndPassword(auth, values.email, values.password);
         console.log("Firebase signIn response:", res);
 
-        if (res?.operationType === "signIn" && res?._tokenResponse?.idToken) {
+        if (res?.operationType === "signIn" && res?.user?.getIdToken) {
+          const token = await res.user.getIdToken();
+
           if (typeof window !== "undefined") {
-            localStorage.setItem("userToken", JSON.stringify(res._tokenResponse.idToken));
-            localStorage.setItem("userEmail", values.email); 
-            localStorage.setItem("accountType", "Standard Account"); 
+            localStorage.setItem("userToken", JSON.stringify(token));
+            localStorage.setItem("userEmail", values.email);
+            localStorage.setItem("accountType", "Standard Account");
           }
           toast.success("Login successful!");
           router.push("/home");
+        } else {
+          throw new Error("Login failed: Token not found");
         }
       } catch (err) {
         toast.error(err?.message || "An unexpected error occurred");
@@ -50,22 +54,22 @@ export default function Login() {
   }
 
   return (
-    <div className="flex min-h-screen">
-      <ToastContainer /> 
-      <div className="w-1/2 bg-gray-200 flex flex-col justify-center items-center text-white p-8">
+    <div className="flex flex-col md:flex-row min-h-screen">
+      <ToastContainer />
+      <div className="w-full md:w-1/2 bg-gray-200 flex flex-col justify-center items-center text-white p-8">
         <img
-          className="w-[400px] mb-10 animate-slide-in shadow-lg transition-all duration-500 ease-in-out opacity-0"
+          className="w-[300px] md:w-[400px] mb-16 animate-slide-in shadow-lg transition-all duration-500 ease-in-out opacity-0"
           src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
           alt="Synck Logo"
         />
-        <p className="text-3xl mb-4 text-center text-black animate-fade-in opacity-0">
+        <p className="text-2xl md:text-3xl mb-6 text-center text-black animate-fade-in opacity-0">
           Seamless IT for your business, boosting your growth.
         </p>
       </div>
 
-      <div className="w-1/2 flex flex-col justify-center items-center bg-white p-8">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-white p-8">
         <div className="w-full max-w-md">
-          <h2 className="text-3xl font-semibold mb-6 text-center">Log in</h2>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Log in</h2>
           <form onSubmit={formik.handleSubmit}>
             <div className="flex flex-col mb-4">
               <label htmlFor="email" className="text-sm font-medium">
@@ -133,7 +137,7 @@ export default function Login() {
               <a
                 href="#"
                 className="text-blue-600 hover:underline"
-                onClick={() => setShowRegister(true)} 
+                onClick={() => setShowRegister(true)}
               >
                 Sign Up
               </a>
@@ -148,7 +152,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
             <div className="flex justify-center mt-2">
-              {/* Burada əlavə olaraq sosial media ilə daxil olma düymələri yerləşdirə bilərsiniz */}
+              {/* Additional social media login buttons can be added here */}
             </div>
           </div>
         </div>
