@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import Header from "../features/header/page";
 import ScrollingCards from "../components/Cards";
 import CardModal from "../components/CardModal";
+import ServicesSection from "../components/ServicesCards";
+import CaseCard from "../components/CaseCard";
+import ConsulCard from "../components/ConsulCard";
+import SwipperCard from "../components/SwipperCard";
 
 export default function HeroSection() {
   const [animate, setAnimate] = useState(false);
@@ -134,6 +138,10 @@ export default function HeroSection() {
       <div className={`transition-opacity duration-1000 ${animate ? 'opacity-100' : 'opacity-0'}`}>
         <ScrollingCards />
         <CardModal />
+        <ServicesSection/>
+        <CaseCard/>
+        <ConsulCard/>
+        <SwipperCard/>
       </div>
     </>
   );

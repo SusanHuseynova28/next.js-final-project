@@ -1,6 +1,6 @@
 export default function CardModal() {
     return (
-      <div className="bg-black w- text-white p-24 w-[80%] mx-auto h-[30rem] rounded-lg mt-24">
+      <div className="bg-black  text-white p-24 w-[80%] mx-auto h-[32rem] rounded-lg mt-24">
         <div className="max-w-7xl flex gap-10">
           <div className="mb-10">
             <h3 className="text-xs text-blue-500 uppercase tracking-wide">
