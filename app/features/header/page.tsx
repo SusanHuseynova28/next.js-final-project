@@ -3,13 +3,13 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMiniChevronDown, HiUser } from "react-icons/hi2";
 import { FaTwitter, FaInstagram, FaLinkedin, FaDribbble } from "react-icons/fa";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const router = useRouter();
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [userEmail, setUserEmail] = useState('');
-  const [accountType, setAccountType] = useState('');
+  const [userEmail, setUserEmail] = useState("");
+  const [accountType, setAccountType] = useState("");
   const [isHomeHovered, setIsHomeHovered] = useState(false);
   const [isCompanyHovered, setIsCompanyHovered] = useState(false);
   const [isPortfolioHovered, setIsPortfolioHovered] = useState(false);
@@ -56,22 +56,22 @@ export default function Header() {
               </Link>
               {isHomeHovered && (
                 <div
-                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[220px]  rounded-lg  mt-1  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[230px]  rounded-lg  mt-[1px]  opacity-100 transition-opacity duration-300 z-50"
                   onClick={() => setIsHomeHovered(true)}
                   onMouseLeave={() => setIsHomeHovered(false)}
                 >
-                 <div className="mt-4  bg-white">
-                 <Link href="/it-services">
-                    <p className="p-2 hover:text-blue-500 text-sm pl-4 ">
-                      IT Services
-                    </p>
-                  </Link>
-                  <Link href="/business-consulting">
-                    <p className="p-2 hover:text-blue-500 text-sm pl-4 ">
-                      Business Consulting
-                    </p>
-                  </Link>
-                 </div>
+                  <div className="mt-3  bg-white">
+                    <Link href="/it-services">
+                      <p className="p-2 hover:text-blue-500 text-sm pl-5 ">
+                        IT Services
+                      </p>
+                    </Link>
+                    <Link href="/business-consulting">
+                      <p className="p-3 hover:text-blue-500 text-sm pl-4 ">
+                        Business Consulting
+                      </p>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
@@ -87,17 +87,17 @@ export default function Header() {
               </Link>
               {isCompanyHovered && (
                 <div
-                  className="absolute left-0 pt-2 lg:pt-6 w-[100%] lg: h-auto lg:h-[25rem]    rounded-lg  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 pt-2 lg:pt-6 w-[100%] h-full    rounded-lg  opacity-100 transition-opacity duration-300 z-50"
                   onMouseEnter={() => setIsCompanyHovered(true)}
                   onMouseLeave={() => setIsCompanyHovered(false)}
                 >
                   <div className="w-full grid grid-cols-1  bg-white mt-[1px] md:grid-cols-4 gap-8 p-8">
-                    {/* Get Started Column */}
+                    
                     <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4">
+                      <h4 className="text-xs font-semibold text-gray-900 mb-4 pl-[10rem]">
                         Get Started
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 pl-[10rem]">
                         <li>
                           <Link href="#">
                             <span className="text-gray-600 hover:text-blue-500 text-xs">
@@ -143,12 +143,12 @@ export default function Header() {
                       </ul>
                     </div>
 
-                    {/* Company Column */}
+                    
                     <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4 lg:pl-16">
+                      <h4 className="text-xs font-semibold text-gray-900 mb-4 lg:pl-[7rem]">
                         Company
                       </h4>
-                      <ul className="space-y-2 lg:pl-16">
+                      <ul className="space-y-2 lg:pl-[7rem]">
                         <li>
                           <Link href="#">
                             <span className="text-gray-600 hover:text-blue-500 text-xs">
@@ -196,10 +196,10 @@ export default function Header() {
 
                     {/* Product Column */}
                     <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4">
+                      <h4 className="text-xs font-semibold text-gray-900 mb-4 pr-4">
                         Product
                       </h4>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 pr-10">
                         <li>
                           <Link href="#">
                             <span className="text-gray-600 hover:text-blue-500 text-xs">
@@ -245,9 +245,9 @@ export default function Header() {
                       </ul>
                     </div>
 
-                    {/* Legal Column */}
+                   
                     <div>
-                      <h4 className="text-xs font-semibold text-gray-900 mb-4">
+                      <h4 className="text-xs font-semibold text-gray-900 mb-4 pr-[4rem]">
                         Legal
                       </h4>
 
@@ -299,7 +299,7 @@ export default function Header() {
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-200 mt-4 pt-4">
+                  <div className=" bg-white mt-4 pt-4">
                     <div className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-8">
                       <div className="flex space-x-4">
                         <Link href="#">
@@ -342,7 +342,7 @@ export default function Header() {
               </Link>
               {isPortfolioHovered && (
                 <div
-                  className="absolute left-0 mt-2 lg:pt-6 w-full  h-auto lg:h-[20rem] bg-white border-t border-gray-200 rounded-lg shadow-lg opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 mt-2  w-full  lg:h-[25rem] bg-white border-t  rounded-lg  opacity-100 transition-opacity duration-300 z-50"
                   onMouseEnter={() => setIsPortfolioHovered(true)}
                   onMouseLeave={() => setIsPortfolioHovered(false)}
                 >
@@ -437,7 +437,7 @@ export default function Header() {
               Contact Us
             </span>
           </Link>
-          
+
           <div className="relative">
             <HiUser
               onClick={toggleUserMenu}
@@ -446,13 +446,17 @@ export default function Header() {
             {isUserMenuOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white border rounded-lg shadow-lg z-50">
                 <div className="block px-4 py-2 text-sm text-gray-700">
-                  <p><strong>Email:</strong> {userEmail}</p>
-                  <p><strong>Hesab Növü:</strong> {accountType}</p>
-                  <button 
-                    onClick={handleLogout} 
+                  <p>
+                    <strong>Email:</strong> {userEmail}
+                  </p>
+                  <p>
+                    <strong>Hesab Növü:</strong> {accountType}
+                  </p>
+                  <button
+                    onClick={handleLogout}
                     className="bg-blue-700 text-sm text-white mt-2 p-3 rounded-lg"
                   >
-                   Log Out
+                    Log Out
                   </button>
                 </div>
               </div>
