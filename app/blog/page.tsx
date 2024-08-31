@@ -1,7 +1,9 @@
 // blog/page.tsx
 import BlogCard from "../components/BlogArticleCard";
+import ProductPromotionSection from "../components/ProductSectionCard";
 import Footer from "../features/Footer/page";
 import Header from "../features/header/page";
+import Form from "../components/Form";
 
 export default function Blog() {
   return (
@@ -61,6 +63,8 @@ export default function Blog() {
         </div>
       </div>
       <BlogCard/>
+      <ProductPromotionSection/>
+      <Form/>
       <Footer />
     </div>
   );
