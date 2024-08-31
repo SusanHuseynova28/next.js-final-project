@@ -1,3 +1,4 @@
+import ContactCards from "../components/ContactCards";
 import WorldMapSection from "../components/MapSectionCard";
 import Footer from "../features/Footer/page";
 import Header from "../features/header/page";
@@ -18,6 +19,7 @@ export default function Contact() {
       </p>
     </div>
     <WorldMapSection/>
+    <ContactCards/>
       <Footer/>
     </div>
   );
