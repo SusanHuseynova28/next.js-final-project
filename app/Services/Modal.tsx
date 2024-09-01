@@ -27,7 +27,7 @@ export default function Modal({ formData, onSave, onClose }: ModalProps) {
       workplace: Yup.string().required("Required"),
       total: Yup.number().required("Required"),
     }),
-    enableReinitialize: true, // This ensures the form reinitializes when formData changes
+    enableReinitialize: true, 
     onSubmit: (values) => {
       onSave(values);
     },

@@ -23,7 +23,6 @@ export default function CardModal() {
         </div>
 
         <div className="flex flex-col space-y-8 lg:pl-6 gap-4 relative">
-          {/* First Row */}
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-8 relative">
             <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 h-auto lg:h-[4.5rem] relative z-10">
               <img
@@ -34,7 +33,6 @@ export default function CardModal() {
               <h4 className="text-blue-500 text-xs">Brainstorming Ideas</h4>
             </div>
 
-            {/* Dotted Line */}
             <div className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-[10.5rem] w-[4rem] border-dotted border-b-2 border-gray-400 z-0"></div>
 
             <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 relative z-10 h-auto lg:h-[4.5rem]">
@@ -46,7 +44,6 @@ export default function CardModal() {
               <h4 className="text-blue-500 text-xs">Product Design</h4>
             </div>
 
-            {/* Dotted Line */}
             <div className="hidden lg:block absolute top-1/2 transform -translate-y-1/2 left-[23rem] w-[4rem] border-dotted border-b-2 border-gray-400 z-0"></div>
 
             <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 relative z-10 h-auto lg:h-[4.5rem]">
@@ -55,18 +52,13 @@ export default function CardModal() {
                 alt="Front-End Development Icon"
                 className="h-10 w-10"
               />
-              <h4 className="text-blue-500 text-xs">
-                Front-End Development
-              </h4>
+              <h4 className="text-blue-500 text-xs">Front-End Development</h4>
             </div>
           </div>
 
-          {/* Vertical Dotted Lines from First Row */}
           <div className="hidden lg:block absolute top-[3.5rem] left-[13rem] h-[4rem] border-dotted border-l-2 border-gray-400 z-0"></div>
           <div className="hidden lg:block absolute top-[3.5rem] left-[25.5rem] h-[4rem] border-dotted border-l-2 border-gray-400 z-0"></div>
-          
 
-          {/* Second Row */}
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-4 lg:space-y-0 lg:space-x-8 relative mt-4 lg:mt-[2rem]">
             <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 relative z-10 h-auto lg:h-[4.5rem]">
               <img
@@ -83,13 +75,10 @@ export default function CardModal() {
                 alt="Back-End Development Icon"
                 className="h-10 w-10"
               />
-              <h4 className="text-blue-500 text-xs">
-                Back-End Development
-              </h4>
+              <h4 className="text-blue-500 text-xs">Back-End Development</h4>
             </div>
           </div>
 
-          {/* Third Row */}
           <div className="flex items-center justify-center space-y-4 lg:space-y-0 lg:space-x-8 relative mt-4 lg:mt-[2rem]">
             <div className="bg-white p-6 rounded-lg shadow-md flex items-center space-x-4 relative z-10 h-auto lg:h-[4.5rem]">
               <img

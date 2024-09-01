@@ -1,14 +1,13 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export default function BlogCard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a network request
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the delay as needed
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,7 +15,6 @@ export default function BlogCard() {
   return (
     <div className="flex justify-center mt-16">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Card 1 */}
         <div className="relative bg-[#E7EEFF] p-6 rounded-lg shadow-md w-full md:w-[34rem] h-auto md:h-[37rem]">
           <div className="overflow-hidden">
             <img
@@ -28,10 +26,13 @@ export default function BlogCard() {
           <div className="mt-12">
             <p className="text-xs text-blue-600">WEB DEVELOPMENT</p>
             <h2 className="text-xl font-bold mt-2 hover:text-blue-600 cursor-pointer">
-              Bluebase launches Tap to Pay on smartphone for international and domestic business
+              Bluebase launches Tap to Pay on smartphone for international and
+              domestic business
             </h2>
             <p className="text-gray-600 mt-2">
-              Small UK merchants, businesses, and other enterprises can now use Tap to Pay on service to replace payment terminals at point of sale.
+              Small UK merchants, businesses, and other enterprises can now use
+              Tap to Pay on service to replace payment terminals at point of
+              sale.
             </p>
           </div>
           <div className="flex mt-4 flex-wrap">
@@ -61,7 +62,6 @@ export default function BlogCard() {
           </div>
         </div>
 
-        {/* Card 2 with Skeleton Loader */}
         <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           {loading ? (
             <div className="animate-pulse">
@@ -87,10 +87,13 @@ export default function BlogCard() {
               <div className="mt-12">
                 <p className="text-xs text-blue-600">CLOUD COMPUTING</p>
                 <h2 className="text-xl font-bold mt-2 hover:text-blue-600 cursor-pointer">
-                  Google Bard launches in EU, overcoming data privacy concerns in the region
+                  Google Bard launches in EU, overcoming data privacy concerns
+                  in the region
                 </h2>
                 <p className="text-gray-600 mt-2">
-                  Small UK merchants, businesses, and other enterprises can now use Tap to Pay on service to replace payment terminals at point of sale.
+                  Small UK merchants, businesses, and other enterprises can now
+                  use Tap to Pay on service to replace payment terminals at
+                  point of sale.
                 </p>
               </div>
               <div className="flex mt-4 flex-wrap">
@@ -118,7 +121,6 @@ export default function BlogCard() {
           )}
         </div>
 
-        {/* Card 3 */}
         <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
@@ -133,7 +135,8 @@ export default function BlogCard() {
               Emerging tech trends to watch in 2024: AI, 5G, and more
             </h2>
             <p className="text-gray-600 mt-2">
-              Discover the latest advancements in AI, 5G, and other technologies set to transform industries in the coming year.
+              Discover the latest advancements in AI, 5G, and other technologies
+              set to transform industries in the coming year.
             </p>
           </div>
           <div className="flex mt-4 flex-wrap">
@@ -159,7 +162,6 @@ export default function BlogCard() {
           </div>
         </div>
 
-        {/* Card 4 */}
         <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
@@ -174,7 +176,8 @@ export default function BlogCard() {
               The impact of AI on businesses: Opportunities and challenges
             </h2>
             <p className="text-gray-600 mt-2">
-              AI is reshaping the business landscape, offering new opportunities but also posing significant challenges.
+              AI is reshaping the business landscape, offering new opportunities
+              but also posing significant challenges.
             </p>
           </div>
           <div className="flex mt-4 flex-wrap">
@@ -200,7 +203,6 @@ export default function BlogCard() {
           </div>
         </div>
 
-        {/* Card 5 */}
         <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
@@ -215,7 +217,8 @@ export default function BlogCard() {
               How Fintech is disrupting traditional banking: Trends and insights
             </h2>
             <p className="text-gray-600 mt-2">
-              Explore the trends in Fintech that are changing the way we think about banking, investments, and financial management.
+              Explore the trends in Fintech that are changing the way we think
+              about banking, investments, and financial management.
             </p>
           </div>
           <div className="flex mt-4 flex-wrap">
@@ -241,7 +244,6 @@ export default function BlogCard() {
           </div>
         </div>
 
-        {/* Card 6 */}
         <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
@@ -256,7 +258,8 @@ export default function BlogCard() {
               Digital health innovations that are improving patient outcomes
             </h2>
             <p className="text-gray-600 mt-2">
-              Digital health technologies are transforming patient care by providing new ways to monitor, diagnose, and treat conditions.
+              Digital health technologies are transforming patient care by
+              providing new ways to monitor, diagnose, and treat conditions.
             </p>
           </div>
           <div className="flex mt-4 flex-wrap">

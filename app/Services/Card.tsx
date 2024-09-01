@@ -5,12 +5,15 @@ import { TableItem } from "../types/types";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 import Modal from "./Modal";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 export default function Card() {
-  const { data, mutate } = useSWR<TableItem[]>("http://localhost:3001/tables", fetcher);
+  const { data, mutate } = useSWR<TableItem[]>(
+    "http://localhost:3001/tables",
+    fetcher
+  );
   const [formData, setFormData] = useState<TableItem | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,7 +32,7 @@ export default function Card() {
         throw new Error("Failed to create new item");
       }
 
-      mutate(); // Refresh the data
+      mutate();
       toast.success("Created successfully!");
       setIsModalOpen(false);
     } catch (error) {
@@ -38,7 +41,10 @@ export default function Card() {
     }
   };
 
-  const handleUpdate = async (id: string, updatedItem: Omit<TableItem, "id">) => {
+  const handleUpdate = async (
+    id: string,
+    updatedItem: Omit<TableItem, "id">
+  ) => {
     try {
       const response = await fetch(`http://localhost:3001/tables/${id}`, {
         method: "PUT",
@@ -52,7 +58,7 @@ export default function Card() {
         throw new Error("Failed to update item");
       }
 
-      mutate(); // Refresh the data
+      mutate();
       toast.success("Updated successfully!");
       setIsModalOpen(false);
     } catch (error) {
@@ -71,7 +77,7 @@ export default function Card() {
         throw new Error("Failed to delete item");
       }
 
-      mutate(); // Refresh the data
+      mutate(); 
       toast.success("Deleted successfully!");
     } catch (error) {
       toast.error("Error deleting item");
@@ -80,22 +86,26 @@ export default function Card() {
   };
 
   const openModal = (item?: TableItem) => {
-    setFormData(item || {
-      name: '',
-      surname: '',
-      age: '',
-      description: '',
-      workplace: '',
-      total: 0,
-    } as TableItem);
+    setFormData(
+      item ||
+        ({
+          name: "",
+          surname: "",
+          age: "",
+          description: "",
+          workplace: "",
+          total: 0,
+        } as TableItem)
+    );
     setIsModalOpen(true);
   };
 
-  const filteredData = data?.filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.surname.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.workplace.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredData = data?.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.surname.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.workplace.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -119,7 +129,9 @@ export default function Card() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {filteredData?.map((item) => (
           <div key={item.id} className="bg-white shadow rounded-lg p-4">
-            <h3 className="text-lg font-bold">{item.name} {item.surname}</h3>
+            <h3 className="text-lg font-bold">
+              {item.name} {item.surname}
+            </h3>
             <p className="text-gray-600">{item.description}</p>
             <p className="text-gray-600">Age: {item.age}</p>
             <p className="text-gray-600">Workplace: {item.workplace}</p>

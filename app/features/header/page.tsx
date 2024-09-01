@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMiniChevronDown, HiUser } from "react-icons/hi2";
-import { FaTwitter, FaInstagram, FaLinkedin, FaDribbble } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 export default function Header() {
@@ -389,7 +388,9 @@ export default function Header() {
           <span className="h-[2rem] border border-gray-300"></span>
           <div className="text-center lg:text-left">
             <Link href="tel:+19387407555">
-              <span className="text-blue-500 text-sm font-bold">Call Us ↗</span>
+              <span className="text-blue-500 text-sm font-bold">
+                Call Us ↗
+              </span>
             </Link>
             <p className="text-sm">+1-938-740-7555</p>
           </div>

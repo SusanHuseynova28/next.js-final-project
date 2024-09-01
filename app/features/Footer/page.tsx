@@ -279,7 +279,9 @@ export default function Footer() {
               </span>
             </div>
             <div>
-              <p className="text-white">© 2023 All rights reserved by WordPressRiver</p>
+              <p className="text-white">
+                © 2023 All rights reserved by WordPressRiver
+              </p>
             </div>
           </div>
         </div>

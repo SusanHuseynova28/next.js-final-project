@@ -4,9 +4,9 @@ export default function ScrollingCards() {
       <div
         className="flex items-center space-x-4 animate-scroll"
         style={{
-          animation: 'scroll 40s linear infinite',
-          display: 'flex',
-          width: 'calc(200px * 10)', // Width of a single set of cards * number of cards
+          animation: "scroll 40s linear infinite",
+          display: "flex",
+          width: "calc(200px * 10)",
         }}
       >
         {[...Array(2)].map((_, i) => (

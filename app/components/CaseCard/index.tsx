@@ -8,7 +8,6 @@ export default function CaseCard() {
       }}
     >
       <div className="container mx-auto px-4 lg:px-8">
-        {/* Header Section */}
         <div className="text-center mb-12">
           <p className="text-blue-600 uppercase tracking-wide text-xs ">
             Case Studies
@@ -18,7 +17,6 @@ export default function CaseCard() {
           </h2>
         </div>
 
-        {/* Navigation Tabs */}
         <div className="flex justify-center mb-12 overflow-x-auto">
           <nav className="bg-white rounded-lg p-4 flex space-x-6 lg:space-x-20">
             <a
@@ -54,9 +52,7 @@ export default function CaseCard() {
           </nav>
         </div>
 
-        {/* Content Section */}
         <div className="flex flex-col lg:flex-row justify-center space-y-8 lg:space-y-0 lg:space-x-8">
-          {/* Image and Info Section in a Single Card */}
           <div className="bg-white shadow-md rounded-lg overflow-hidden p-6 lg:p-8 w-full lg:w-[30rem]">
             <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
               <div className="w-full lg:w-1/2 mb-4 lg:mb-0">

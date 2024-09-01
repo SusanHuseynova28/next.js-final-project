@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from "react";
 
 export default function WorldMapSection() {
   return (
@@ -10,7 +10,6 @@ export default function WorldMapSection() {
         className="w-full h-auto lg:w-[700px] lg:h-[500px]"
       />
 
-      {/* Map Points */}
       <div className="absolute top-[35%] left-[28%] w-4 h-4 lg:w-6 lg:h-6 bg-blue-200 rounded-full flex items-center justify-center">
         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
       </div>
@@ -30,7 +29,6 @@ export default function WorldMapSection() {
         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
       </div>
 
-      {/* Connect Us Button */}
       <div className="absolute top-4 right-4 lg:top-8 lg:right-10">
         <button className="bg-blue-100 text-blue-700 px-3 py-1 lg:px-4 lg:py-2 rounded-lg text-xs lg:text-sm">
           Connect Us

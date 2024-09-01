@@ -1,7 +1,7 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
-import 'swiper/css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "swiper/css";
 
 export default function Showcase() {
   return (
@@ -9,11 +9,10 @@ export default function Showcase() {
       className="container mt-[15rem]"
       style={{
         background:
-          'linear-gradient(180deg, rgba(243, 246, 253, 0.7) 0%, rgba(243, 246, 253, 0) 86.26%)',
+          "linear-gradient(180deg, rgba(243, 246, 253, 0.7) 0%, rgba(243, 246, 253, 0) 86.26%)",
       }}
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left Section */}
         <div className="flex flex-col px-6 lg:pl-[15rem] w-full lg:w-[30rem] mt-16">
           <p className="text-blue-600 uppercase tracking-widest text-xs mb-2">
             Projects
@@ -41,7 +40,6 @@ export default function Showcase() {
           </ul>
         </div>
 
-        {/* Right Section with Swiper */}
         <div className="swiper-container mt-16">
           <Swiper
             spaceBetween={20}
@@ -63,7 +61,6 @@ export default function Showcase() {
             }}
             className="w-full"
           >
-            {/* Slide 1 */}
             <SwiperSlide>
               <div className="relative overflow-hidden rounded-lg h-[300px] lg:h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
@@ -82,7 +79,6 @@ export default function Showcase() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 2 */}
             <SwiperSlide>
               <div className="relative overflow-hidden rounded-lg h-[300px] lg:h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
@@ -101,7 +97,6 @@ export default function Showcase() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 3 */}
             <SwiperSlide>
               <div className="relative overflow-hidden rounded-lg h-[300px] lg:h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">
@@ -120,7 +115,6 @@ export default function Showcase() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 4 */}
             <SwiperSlide>
               <div className="relative overflow-hidden rounded-lg h-[300px] lg:h-[400px] w-full">
                 <div className="relative h-full w-full transition-transform duration-300 hover:scale-110">

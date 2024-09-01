@@ -20,7 +20,8 @@ export default function BluebaseandSnaponCards() {
             </h2>
             <p className="text-gray-600 mt-2">
               Small UK merchants, businesses, and other enterprises can now use
-              Tap to Pay on service to replace payment terminals at point of sale.
+              Tap to Pay on service to replace payment terminals at point of
+              sale.
             </p>
           </div>
           <div className="flex flex-wrap mt-4">
@@ -61,12 +62,13 @@ export default function BluebaseandSnaponCards() {
           <div className="mt-6 lg:mt-12">
             <p className="text-xs text-blue-600">CLOUD COMPUTING</p>
             <h2 className="text-lg lg:text-xl font-bold mt-2 hover:text-blue-700 cursor-pointer">
-              Google Bard launches in EU, overcoming data privacy concerns in the
-              region
+              Google Bard launches in EU, overcoming data privacy concerns in
+              the region
             </h2>
             <p className="text-gray-600 mt-2">
               Small UK merchants, businesses, and other enterprises can now use
-              Tap to Pay on service to replace payment terminals at point of sale.
+              Tap to Pay on service to replace payment terminals at point of
+              sale.
             </p>
           </div>
           <div className="flex flex-wrap mt-4">

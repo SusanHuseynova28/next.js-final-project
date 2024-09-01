@@ -6,9 +6,9 @@ import CustomLoadingSpinner from "../components/CustomLoading";
 import { signInWithEmailAndPassword } from "@firebase/auth";
 import { auth } from "../_firebase/config";
 import { ToastContainer, toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import Register from "../register/page";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const router = useRouter();
@@ -25,7 +25,11 @@ export default function Login() {
     onSubmit: async (values) => {
       setIsLoading(true);
       try {
-        const res = await signInWithEmailAndPassword(auth, values.email, values.password);
+        const res = await signInWithEmailAndPassword(
+          auth,
+          values.email,
+          values.password
+        );
         console.log("Firebase signIn response:", res);
 
         if (res?.operationType === "signIn" && res?.user?.getIdToken) {
@@ -69,7 +73,9 @@ export default function Login() {
 
       <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-white p-4 md:p-8">
         <div className="w-full max-w-md">
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6 text-center">Log in</h2>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6 text-center">
+            Log in
+          </h2>
           <form onSubmit={formik.handleSubmit}>
             <div className="flex flex-col mb-3 md:mb-4">
               <label htmlFor="email" className="text-sm font-medium">
@@ -86,7 +92,9 @@ export default function Login() {
                 value={formik.values.email}
               />
               {formik.errors.email && formik.touched.email ? (
-                <div className="text-red-500 text-xs mt-1">{formik.errors.email}</div>
+                <div className="text-red-500 text-xs mt-1">
+                  {formik.errors.email}
+                </div>
               ) : null}
             </div>
 
@@ -105,7 +113,9 @@ export default function Login() {
                 value={formik.values.password}
               />
               {formik.errors.password && formik.touched.password ? (
-                <div className="text-red-500 text-xs mt-1">{formik.errors.password}</div>
+                <div className="text-red-500 text-xs mt-1">
+                  {formik.errors.password}
+                </div>
               ) : null}
             </div>
 
@@ -118,7 +128,10 @@ export default function Login() {
                 checked={formik.values.rememberMe}
                 className="h-4 w-4 text-blue-600 border-gray-300 rounded"
               />
-              <label htmlFor="rememberMe" className="ml-2 text-sm text-gray-700">
+              <label
+                htmlFor="rememberMe"
+                className="ml-2 text-sm text-gray-700"
+              >
                 Keep me logged in
               </label>
             </div>
@@ -150,9 +163,7 @@ export default function Login() {
 
           <div className="mt-4 md:mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
-            <div className="flex justify-center mt-2">
-              {/* Additional social media login buttons can be added here */}
-            </div>
+            <div className="flex justify-center mt-2"></div>
           </div>
         </div>
       </div>

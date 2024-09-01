@@ -1,4 +1,4 @@
-// blog/page.tsx
+
 import BlogCard from "../components/BlogArticleCard";
 import ProductPromotionSection from "../components/ProductSectionCard";
 import Footer from "../features/Footer/page";

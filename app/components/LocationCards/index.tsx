@@ -23,7 +23,7 @@ export default function StoreLocations() {
           </p>
         </div>
 
-        {/* Right Section */}
+       
         <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-12 justify-center items-center">
           <div className="bg-white text-black p-6 rounded-lg shadow-lg flex flex-row justify-center items-center w-[300px] h-[150px] ">
             <div className="bg-blue-100 text-blue-600 w-[130px] h-[60px] text-xl flex items-center justify-center rounded-full ">
