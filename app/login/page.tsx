@@ -58,20 +58,20 @@ export default function Login() {
       <ToastContainer />
       <div className="w-full md:w-1/2 bg-gray-200 flex flex-col justify-center items-center text-white p-8">
         <img
-          className="w-[300px] md:w-[400px] mb-16 animate-slide-in shadow-lg transition-all duration-500 ease-in-out opacity-0"
+          className="w-[200px] md:w-[300px] lg:w-[400px] mb-8 md:mb-16 animate-slide-in-with-shadow"
           src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
           alt="Synck Logo"
         />
-        <p className="text-2xl md:text-3xl mb-6 text-center text-black animate-fade-in opacity-0">
+        <p className="text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 text-center text-black animate-slide-in-with-shadow">
           Seamless IT for your business, boosting your growth.
         </p>
       </div>
 
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-white p-8">
+      <div className="w-full md:w-1/2 flex flex-col justify-center items-center bg-white p-4 md:p-8">
         <div className="w-full max-w-md">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-center">Log in</h2>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-4 md:mb-6 text-center">Log in</h2>
           <form onSubmit={formik.handleSubmit}>
-            <div className="flex flex-col mb-4">
+            <div className="flex flex-col mb-3 md:mb-4">
               <label htmlFor="email" className="text-sm font-medium">
                 Email *
               </label>
@@ -90,7 +90,7 @@ export default function Login() {
               ) : null}
             </div>
 
-            <div className="flex flex-col mb-4">
+            <div className="flex flex-col mb-3 md:mb-4">
               <label htmlFor="password" className="text-sm font-medium">
                 Password *
               </label>
@@ -109,7 +109,7 @@ export default function Login() {
               ) : null}
             </div>
 
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-3 md:mb-4">
               <input
                 id="rememberMe"
                 name="rememberMe"
@@ -131,25 +131,24 @@ export default function Login() {
             </button>
           </form>
 
-          <div className="mt-6 text-center">
+          <div className="mt-4 md:mt-6 text-center">
             <p className="text-gray-500">
               Don't have an account?{" "}
-              <a
-                href="#"
-                className="text-blue-600 hover:underline"
+              <button
                 onClick={() => setShowRegister(true)}
+                className="text-blue-600 hover:underline"
               >
                 Sign Up
-              </a>
+              </button>
             </p>
             <p className="text-gray-500 mt-2">
-              <a href="#" className="text-blue-600 hover:underline">
+              <button className="text-blue-600 hover:underline">
                 Forgot password?
-              </a>
+              </button>
             </p>
           </div>
 
-          <div className="mt-6 text-center">
+          <div className="mt-4 md:mt-6 text-center">
             <p className="text-gray-500">Or sign in with</p>
             <div className="flex justify-center mt-2">
               {/* Additional social media login buttons can be added here */}

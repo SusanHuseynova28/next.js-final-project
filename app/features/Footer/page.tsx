@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <div className="bg-[#1C1C1C] mt-10">
-      {/* Background Image */}
       <div
         className="bg-cover bg-no-repeat bg-center"
         style={{
@@ -11,16 +10,14 @@ export default function Footer() {
         }}
       >
         <div className="container mx-auto px-4 py-16">
-          {/* Upper Section */}
-          <div className="flex flex-wrap justify-center items-center p-10 gap-10 ">
-            {/* Left Side */}
+          <div className="flex flex-wrap justify-center items-center p-10 gap-10">
             <div className="w-full lg:w-1/3 mb-6 lg:mb-0">
               <div>
                 <img
                   src="https://wpriverthemes.com/synck/wp-content/uploads/2024/03/logo-white.svg"
                   alt="Logo"
                 />
-                <p className="text-sm mt-10 w-[18rem] text-gray-400 ">
+                <p className="text-sm mt-10 w-[18rem] text-gray-400">
                   We provide the expertise and support to propel your business
                   forward.
                 </p>
@@ -67,7 +64,6 @@ export default function Footer() {
               </div>
             </div>
             <div className="h-[20rem] border border-gray-600"></div>
-            {/* Right Side */}
             <div className="w-full lg:w-1/3 mb-6 lg:mb-0 flex flex-col pl-10">
               <span className="text-xl font-semibold mt-4 text-white">
                 Let's get started on something great
@@ -76,31 +72,33 @@ export default function Footer() {
                 Our team of IT experts looks forward to meeting with you and
                 providing valuable insights tailored to your business.
               </span>
-              <button className="bg-blue-600 hover:bg-white hover:text-black text-white px-3 py-1 rounded-lg mt-10 w-[15rem] ">
+              <button className="bg-blue-600 hover:bg-white hover:text-black text-white px-3 py-1 rounded-lg mt-10 w-[15rem]">
                 Get an appointment now
               </button>
               <div className="flex mt-10 space-x-4 gap-6">
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <span className="text-xl text-white">2 Mins</span>
                   <span className="text-xs mt-1 text-white">Response Time</span>
                 </div>
-                <div className="flex flex-col ">
-                  <span className="text-xl text-white ">99%</span>
-                  <span className="text-xs mt-1 text-white">Client Satisfaction</span>
+                <div className="flex flex-col">
+                  <span className="text-xl text-white">99%</span>
+                  <span className="text-xs mt-1 text-white">
+                    Client Satisfaction
+                  </span>
                 </div>
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <span className="text-xl text-white">22+ Years</span>
-                  <span className="text-xs mt-1 text-white">Field Experience</span>
+                  <span className="text-xs mt-1 text-white">
+                    Field Experience
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-          <div className="border border-gray-600 "></div>
-          {/* Lower Section */}
-          <div className="border-gray-800 mt-4 pt-8 flex justify-center items-center gap-[5rem] ">
+          <div className="border border-gray-600"></div>
+          <div className="border-gray-800 mt-4 pt-8 flex justify-center items-center gap-[5rem]">
             <div className="flex flex-wrap justify-center text-sm">
-              <div className="flex justify-center items-center gap-16 ">
-                {/* Services */}
+              <div className="flex justify-center items-center gap-16">
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
                   <p className="font-semibold mt-6 text-white">Services</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
@@ -125,7 +123,6 @@ export default function Footer() {
                   </ul>
                 </div>
 
-                {/* Company */}
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
                   <p className="font-semibold mb-6 text-white">Company</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
@@ -150,7 +147,6 @@ export default function Footer() {
                   </ul>
                 </div>
 
-                {/* Product */}
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
                   <p className="font-semibold mt-7 text-white">Product</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
@@ -175,7 +171,6 @@ export default function Footer() {
                   </ul>
                 </div>
 
-                {/* Our Fields */}
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
                   <p className="font-semibold text-white">Our Fields</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
@@ -200,7 +195,6 @@ export default function Footer() {
                   </ul>
                 </div>
 
-                {/* Legal */}
                 <div className="w-full lg:w-1/6 mb-6 lg:mb-0">
                   <p className="font-semibold mb-2 text-white">Legal</p>
                   <ul className="flex flex-col gap-4 text-xs text-white">
@@ -241,7 +235,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="border border-gray-600 mt-10"></div>
-          <div className="flex justify-center gap-[39rem] items-center text-sm mt-10 ">
+          <div className="flex justify-center gap-[39rem] items-center text-sm mt-10">
             <div className="flex text-white">
               <span>
                 <svg

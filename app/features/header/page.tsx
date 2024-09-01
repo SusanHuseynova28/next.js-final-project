@@ -36,7 +36,7 @@ export default function Header() {
 
   return (
     <div>
-      <header className="flex flex-col lg:flex-row items-center justify-around p-4 border relative w-full">
+      <header className="z-50 flex flex-col lg:flex-row items-center justify-around p-4 border w-full bg-white">
         <div className="flex flex-col lg:flex-row items-center ">
           <img
             src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/logo.svg"
@@ -56,18 +56,18 @@ export default function Header() {
               </Link>
               {isHomeHovered && (
                 <div
-                  className="absolute left-0 pt-2 lg:pt-2 w-full lg:w-[230px]  rounded-lg  mt-[5px]  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0  w-full lg:w-[230px]  rounded-lg  mt-[1px]  opacity-100 transition-opacity duration-300 z-50"
                   onClick={() => setIsHomeHovered(true)}
                   onMouseLeave={() => setIsHomeHovered(false)}
                 >
                   <div className="mt-3  bg-white">
                     <Link href="/it-services">
-                      <p className="p-2 hover:text-blue-500 text-sm pl-5 ">
+                      <p className="p-2 hover:text-blue-500 text-sm pl-5">
                         IT Services
                       </p>
                     </Link>
                     <Link href="/business-consulting">
-                      <p className="p-3 hover:text-blue-500 text-sm pl-4 ">
+                      <p className="p-3 hover:text-blue-500 text-sm pl-4">
                         Business Consulting
                       </p>
                     </Link>
@@ -87,11 +87,11 @@ export default function Header() {
               </Link>
               {isCompanyHovered && (
                 <div
-                  className="absolute left-0 pt-2 lg:pt-6 w-[100%] h-full    rounded-lg  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 pt-2 lg:pt-6 w-[100%] h-full rounded-lg opacity-100 transition-opacity duration-300 z-50"
                   onMouseEnter={() => setIsCompanyHovered(true)}
                   onMouseLeave={() => setIsCompanyHovered(false)}
                 >
-                  <div className="w-full grid grid-cols-1  bg-white mt-[1px] md:grid-cols-4 gap-8 p-8">
+                  <div className="w-full grid grid-cols-1 bg-white mt-[1px] md:grid-cols-4 gap-8 p-8">
                     <div>
                       <h4 className="text-xs font-semibold text-gray-900 mb-4 pl-[10rem]">
                         Get Started
@@ -193,14 +193,13 @@ export default function Header() {
                     </div>
 
                     <div className="flex gap-20">
-                      
-                      <ul className="space-y-2 ">
-                      <h4 className="text-xs font-semibold text-gray-900 ">
-                        Product
-                      </h4>
+                      <ul className="space-y-2">
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          Product
+                        </h4>
                         <li>
                           <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
+                            <span className="text-gray-600 hover:text-blue-500 text-xs mt-2">
                               Overview
                             </span>
                           </Link>
@@ -226,65 +225,65 @@ export default function Header() {
                             </span>
                           </Link>
                         </li>
-                        
                       </ul>
                       <div>
-                      <h4 className="text-xs font-semibold text-gray-900  ">
-                        Legal
-                      </h4>
+                        <h4 className="text-xs font-semibold text-gray-900">
+                          Legal
+                        </h4>
 
-                      <ul className="space-y-2">
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Licenses
-                            </span>
-                          </Link>
-                        </li>
-
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Settings
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Cookies
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Document
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Terms
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href="#">
-                            <span className="text-gray-600 hover:text-blue-500 text-xs">
-                              Privacy
-                            </span>
-                          </Link>
-                        </li>
-                      </ul>
+                        <ul className="space-y-2 mt-2">
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Licenses
+                              </span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Settings
+                              </span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Cookies
+                              </span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Document
+                              </span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Terms
+                              </span>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link href="#">
+                              <span className="text-gray-600 hover:text-blue-500 text-xs">
+                                Privacy
+                              </span>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="">
+                        <img
+                          src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/iphone-13-1.jpg"
+                          alt=""
+                          className="w-[5rem]"
+                        />
+                      </div>
                     </div>
-                    <div className="">
-                    <img src="https://wpriverthemes.com/synck/wp-content/uploads/2024/02/iphone-13-1.jpg" alt="" className="w-[5rem] " />
-
-                    </div>
-                    </div>
-                    
                   </div>
                 </div>
               )}
@@ -302,7 +301,7 @@ export default function Header() {
               </Link>
               {isPortfolioHovered && (
                 <div
-                  className="absolute left-0 mt-2  w-full  lg:h-[25rem] bg-white border-t  rounded-lg  opacity-100 transition-opacity duration-300 z-50"
+                  className="absolute left-0 mt-1 w-full lg:h-[25rem] bg-white border-t rounded-lg opacity-100 transition-opacity duration-300 z-50"
                   onMouseEnter={() => setIsPortfolioHovered(true)}
                   onMouseLeave={() => setIsPortfolioHovered(false)}
                 >
@@ -373,7 +372,7 @@ export default function Header() {
               )}
             </div>
 
-            <Link href="/services">
+            <Link href="/Services">
               <span className="text-black text-sm hover:text-blue-500 flex items-center">
                 Services <HiMiniChevronDown className="ml-1" />
               </span>
@@ -385,11 +384,10 @@ export default function Header() {
             </Link>
           </nav>
         </div>
-        
+
         <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 gap-4 mt-4 lg:mt-0">
-        <span className="h-[2rem] border border-gray-300"></span>
+          <span className="h-[2rem] border border-gray-300"></span>
           <div className="text-center lg:text-left">
-            
             <Link href="tel:+19387407555">
               <span className="text-blue-500 text-sm font-bold">Call Us ↗</span>
             </Link>
@@ -413,7 +411,7 @@ export default function Header() {
                   <p>
                     <strong>Email:</strong> {userEmail}
                   </p>
-                  
+
                   <button
                     onClick={handleLogout}
                     className="bg-blue-700 text-sm text-white mt-2 p-3 rounded-lg"

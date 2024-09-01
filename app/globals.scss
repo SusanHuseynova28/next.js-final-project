@@ -6,18 +6,15 @@
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
 
- 
-
-  
-  .animate-scroll::after {
+ .animate-scroll::after {
     content: "";
     display: block;
     flex-shrink: 0;
-    width: 100%; /* Match the width of the entire content to create a loop effect */
+    width: 100%; 
   }
   
 .animate-slide-in {
-    animation: slideIn 1s ease-in-out forwards;
+    animation: slideIn 2s ease-in-out forwards;
 }
 
 .animate-fade-in {
@@ -53,7 +50,7 @@
   .animate-scroll {
     display: flex;
     width: calc(200%); 
-    animation: scroll 30s linear infinite;
+    animation: scroll 10s linear infinite;
   }
 
   @keyframes fadeIn {
@@ -71,4 +68,58 @@
     animation: fadeIn 2s ease-out forwards;
   }
   
+ 
+
+// Slide-in Animation with Shadow
+@keyframes slideInWithShadow {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    box-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes pulseSlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.animate-slide-in-with-shadow {
+  animation: slideInWithShadow 1s ease-out forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 4s ease-in-out infinite;
+}
+
+.animate-zoom-in-out {
+  animation: zoomInOut 6s ease-in-out infinite;
+}
+
+
   

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from 'react';
 
 export default function BlogCard() {
@@ -15,9 +15,9 @@ export default function BlogCard() {
 
   return (
     <div className="flex justify-center mt-16">
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Card 1 */}
-        <div className="relative bg-[#E7EEFF] p-6 rounded-lg shadow-md w-[34rem] h-[37rem]">
+        <div className="relative bg-[#E7EEFF] p-6 rounded-lg shadow-md w-full md:w-[34rem] h-auto md:h-[37rem]">
           <div className="overflow-hidden">
             <img
               src="https://wpriverthemes.com/synck/wp-content/uploads/2023/11/news-2.jpg"
@@ -34,7 +34,7 @@ export default function BlogCard() {
               Small UK merchants, businesses, and other enterprises can now use Tap to Pay on service to replace payment terminals at point of sale.
             </p>
           </div>
-          <div className="flex mt-4">
+          <div className="flex mt-4 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Collaboration Tools</span>
@@ -44,7 +44,7 @@ export default function BlogCard() {
               <span>Requirement</span>
             </div>
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-2 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Smart Reminders</span>
@@ -62,7 +62,7 @@ export default function BlogCard() {
         </div>
 
         {/* Card 2 with Skeleton Loader */}
-        <div className="relative bg-[#E7EEFF] w-[34rem] h-[37rem] p-6 rounded-lg shadow-md">
+        <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           {loading ? (
             <div className="animate-pulse">
               <div className="w-full h-48 bg-gray-300 rounded-lg mb-6"></div>
@@ -93,7 +93,7 @@ export default function BlogCard() {
                   Small UK merchants, businesses, and other enterprises can now use Tap to Pay on service to replace payment terminals at point of sale.
                 </p>
               </div>
-              <div className="flex mt-4">
+              <div className="flex mt-4 flex-wrap">
                 <div className="flex items-center">
                   <div className="text-blue-600 mr-2">&#10003;</div>
                   <span>Collaboration Tools</span>
@@ -103,7 +103,7 @@ export default function BlogCard() {
                   <span>Requirement</span>
                 </div>
               </div>
-              <div className="flex mt-2">
+              <div className="flex mt-2 flex-wrap">
                 <div className="flex items-center">
                   <div className="text-blue-600 mr-2">&#10003;</div>
                   <span>Smart Reminders</span>
@@ -119,7 +119,7 @@ export default function BlogCard() {
         </div>
 
         {/* Card 3 */}
-        <div className="relative bg-[#E7EEFF] w-[34rem] h-[37rem] p-6 rounded-lg shadow-md">
+        <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
               src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-4.jpg"
@@ -136,7 +136,7 @@ export default function BlogCard() {
               Discover the latest advancements in AI, 5G, and other technologies set to transform industries in the coming year.
             </p>
           </div>
-          <div className="flex mt-4">
+          <div className="flex mt-4 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Innovation</span>
@@ -146,7 +146,7 @@ export default function BlogCard() {
               <span>Research</span>
             </div>
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-2 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Smart Reminders</span>
@@ -160,7 +160,7 @@ export default function BlogCard() {
         </div>
 
         {/* Card 4 */}
-        <div className="relative bg-[#E7EEFF] w-[34rem] h-[37rem] p-6 rounded-lg shadow-md">
+        <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
               src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-5.jpg"
@@ -177,7 +177,7 @@ export default function BlogCard() {
               AI is reshaping the business landscape, offering new opportunities but also posing significant challenges.
             </p>
           </div>
-          <div className="flex mt-4">
+          <div className="flex mt-4 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>AI Tools</span>
@@ -187,7 +187,7 @@ export default function BlogCard() {
               <span>Data Management</span>
             </div>
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-2 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Smart Reminders</span>
@@ -201,7 +201,7 @@ export default function BlogCard() {
         </div>
 
         {/* Card 5 */}
-        <div className="relative bg-[#E7EEFF] w-[34rem] h-[37rem] p-6 rounded-lg shadow-md">
+        <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
               src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-6.jpg"
@@ -218,7 +218,7 @@ export default function BlogCard() {
               Explore the trends in Fintech that are changing the way we think about banking, investments, and financial management.
             </p>
           </div>
-          <div className="flex mt-4">
+          <div className="flex mt-4 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Financial Planning</span>
@@ -228,7 +228,7 @@ export default function BlogCard() {
               <span>Investment Tools</span>
             </div>
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-2 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Smart Reminders</span>
@@ -242,7 +242,7 @@ export default function BlogCard() {
         </div>
 
         {/* Card 6 */}
-        <div className="relative bg-[#E7EEFF] w-[34rem] h-[37rem] p-6 rounded-lg shadow-md">
+        <div className="relative bg-[#E7EEFF] w-full md:w-[34rem] h-auto md:h-[37rem] p-6 rounded-lg shadow-md">
           <div className="overflow-hidden">
             <img
               src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-7.jpg"
@@ -259,7 +259,7 @@ export default function BlogCard() {
               Digital health technologies are transforming patient care by providing new ways to monitor, diagnose, and treat conditions.
             </p>
           </div>
-          <div className="flex mt-4">
+          <div className="flex mt-4 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Healthcare Tools</span>
@@ -269,7 +269,7 @@ export default function BlogCard() {
               <span>Patient Management</span>
             </div>
           </div>
-          <div className="flex mt-2">
+          <div className="flex mt-2 flex-wrap">
             <div className="flex items-center">
               <div className="text-blue-600 mr-2">&#10003;</div>
               <span>Smart Reminders</span>

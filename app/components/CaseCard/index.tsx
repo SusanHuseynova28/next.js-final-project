@@ -7,20 +7,20 @@ export default function CaseCard() {
           "linear-gradient(180deg, rgba(243, 246, 253, 0.7) 0%, rgba(243, 246, 253, 0) 86.26%)",
       }}
     >
-      <div className="container mx-auto px-6 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
           <p className="text-blue-600 uppercase tracking-wide text-xs ">
             Case Studies
           </p>
-          <h2 className="text-4xl lg:text-4xl font-bold text-gray-900 mt-4">
+          <h2 className="text-xl lg:text-4xl font-bold text-gray-900 mt-4">
             Detailing of our products
           </h2>
         </div>
 
         {/* Navigation Tabs */}
-        <div className="flex justify-center mb-12">
-          <nav className="bg-white  rounded-lg p-4 flex space-x-20">
+        <div className="flex justify-center mb-12 overflow-x-auto">
+          <nav className="bg-white rounded-lg p-4 flex space-x-6 lg:space-x-20">
             <a
               href="#"
               className="bg-black text-white px-4 py-2 rounded-lg text-sm font-medium transition"
@@ -55,10 +55,10 @@ export default function CaseCard() {
         </div>
 
         {/* Content Section */}
-        <div className="flex justify-center space-x-8">
+        <div className="flex flex-col lg:flex-row justify-center space-y-8 lg:space-y-0 lg:space-x-8">
           {/* Image and Info Section in a Single Card */}
-          <div className="bg-white shadow-md rounded-lg overflow-hidden p-8 w-[30rem]">
-            <div className="flex flex-col lg:flex-row items-center space-x-4">
+          <div className="bg-white shadow-md rounded-lg overflow-hidden p-6 lg:p-8 w-full lg:w-[30rem]">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4">
               <div className="w-full lg:w-1/2 mb-4 lg:mb-0">
                 <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-medium inline-block mb-12">
                   Web Development
@@ -82,8 +82,7 @@ export default function CaseCard() {
             </div>
           </div>
 
-         
-          <div className="bg-white shadow-md rounded-lg p-10 w-[28rem] flex flex-col justify-between ">
+          <div className="bg-white shadow-md rounded-lg p-6 lg:p-10 w-full lg:w-[28rem] flex flex-col justify-between">
             <div>
               <div className="flex items-center mb-4">
                 <img
@@ -95,7 +94,7 @@ export default function CaseCard() {
               <h3 className="text-xl font-semibold text-gray-900">
                 Development
               </h3>
-              <p className="text-gray-600 mt-4 text-sm w-[22rem]">
+              <p className="text-gray-600 mt-4 text-sm">
                 Software development is a dynamic and rapidly evolving field
                 that plays a pivotal role in shaping the digital landscape we
                 live in today. It encompasses the processes, methodologies, and
@@ -106,7 +105,7 @@ export default function CaseCard() {
             <div className="mt-8 flex justify-end">
               <a
                 href="#"
-                className="bg-blue-600 text-white px-5 py-3 rounded-full inline-flex items-end  hover:bg-blue-700 transition"
+                className="bg-blue-600 text-white px-5 py-3 rounded-full inline-flex items-end hover:bg-black transition"
               >
                 <span className="text-white text-lg">↗</span>
               </a>

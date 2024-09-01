@@ -1,40 +1,130 @@
 {
-    "services": [
-      {
-        "id": 1,
-        "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-1-2.svg",
-        "title": "Development",
-        "description": "Our development is pixel perfect in all ways.",
-        "isFree": false
-      },
-      {
-        "id": 2,
-        "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-2-2.svg",
-        "title": "Woo Commerce",
-        "description": "We have a best team for your shopping websites.",
-        "isFree": false
-      },
-      {
-        "id": 3,
-        "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-3-2.svg",
-        "title": "CRM Solutions",
-        "description": "We enhance customer experiences for success.",
-        "isFree": false
-      },
-      {
-        "id": 4,
-        "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-4-2.svg",
-        "title": "Web Design",
-        "description": "We create vibrant, intuitive and minimalist web designs.",
-        "isFree": false
-      },
-      {
-        "id": 5,
-        "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-5-2.svg",
-        "title": "IT Support",
-        "description": "We offer expert assistance for your IT issues.",
-        "isFree": true
-      }
-    ]
-  }
-  
+  "services": [
+    {
+      "id": "1",
+      "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-1-2.svg",
+      "title": "Development",
+      "description": "Our development is pixel perfect in all ways.",
+      "isFree": false
+    },
+    {
+      "id": "2",
+      "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-2-2.svg",
+      "title": "Woo Commerce",
+      "description": "We have a best team for your shopping websites.",
+      "isFree": false
+    },
+    {
+      "id": "3",
+      "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-3-2.svg",
+      "title": "CRM Solutions",
+      "description": "We enhance customer experiences for success.",
+      "isFree": false
+    },
+    {
+      "id": "4",
+      "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-4-2.svg",
+      "title": "Web Design",
+      "description": "We create vibrant, intuitive and minimalist web designs.",
+      "isFree": false
+    },
+    {
+      "id": "5",
+      "icon": "https://wpriverthemes.com/synck/wp-content/uploads/2023/11/service-icon-5-2.svg",
+      "title": "IT Support",
+      "description": "We offer expert assistance for your IT issues.",
+      "isFree": true
+    }
+  ],
+  "tables": [
+    {
+      "name": "Jone",
+      "surname": "Smith",
+      "age": 42,
+      "description": "Product Manager",
+      "workplace": "InnovateX",
+      "total": 9000,
+      "id": "1"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "2",
+      "name": "Jane",
+      "surname": "Smith",
+      "age": 25,
+      "description": "Product Manager",
+      "total": 9000,
+      "workplace": "InnovateX"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "3",
+      "name": "Michael",
+      "surname": "Johnson",
+      "age": 40,
+      "description": "CTO",
+      "total": 15000,
+      "workplace": "WebSolutions"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "4",
+      "name": "Emily",
+      "surname": "Williams",
+      "age": "40",
+      "description": "UX Designer",
+      "total": 8500,
+      "workplace": "Designify"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "5",
+      "name": "Daniel",
+      "surname": "Brown",
+      "age": 28,
+      "description": "Data Analyst",
+      "total": 9500,
+      "workplace": "DataCorp"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "6",
+      "name": "Sophia",
+      "surname": "Davis",
+      "age": 32,
+      "description": "Marketing Specialist",
+      "total": 10500,
+      "workplace": "MarketGurus"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "7",
+      "name": "James",
+      "surname": "Miller",
+      "age": 45,
+      "description": "Sales Manager",
+      "total": 12000,
+      "workplace": "SalesForce"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "8",
+      "name": "William",
+      "surname": "Miller",
+      "age": 45,
+      "description": "Sales Manager",
+      "total": 12000,
+      "workplace": "SalesForce"
+    },
+    {
+      "image": "/images/example.jpg",
+      "id": "9",
+      "name": "Jakhson",
+      "surname": "Riller",
+      "age": 45,
+      "description": "Sales Manager",
+      "total": 12000,
+      "workplace": "SalesForce"
+    }
+  ]
+}
