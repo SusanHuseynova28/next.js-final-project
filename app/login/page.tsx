@@ -46,8 +46,12 @@ export default function Login() {
           throw new Error("Login failed: Token not found");
         }
       } catch (err) {
-        toast.error(err?.message || "An unexpected error occurred");
-      } finally {
+  if (err instanceof Error) {
+    toast.error(err.message);
+  } else {
+    toast.error("An unexpected error occurred");
+  }
+}finally {
         setIsLoading(false);
       }
     },
@@ -146,7 +150,7 @@ export default function Login() {
 
           <div className="mt-4 md:mt-6 text-center">
             <p className="text-gray-500">
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <button
                 onClick={() => setShowRegister(true)}
                 className="text-blue-600 hover:underline"
